@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SuppSync
+//  SuppsTrack
 //
 //  Created by Bori Akinola on 16/08/2024.
 //
@@ -16,9 +16,8 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        
+        
     }
-}
-
-#Preview {
-    ContentView()
+    
 }
