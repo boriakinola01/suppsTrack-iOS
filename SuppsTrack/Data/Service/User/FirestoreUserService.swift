@@ -45,8 +45,15 @@ class FirestoreUserService: UserService {
                 return
             }
             
-            let userEntity: UserEntity = try! document.data(as: UserEntity.self)
-            completion(userEntity)
+//            let userEntity: UserEntity = try! document.data(as: UserEntity.self)
+            
+            do {
+                let userEntity: UserEntity = try document.data(as: UserEntity.self)
+                completion(userEntity)
+            } catch {
+                print("Failed to decode document to UserEntity: \(error)")
+            }
+            
         }
     }
     
