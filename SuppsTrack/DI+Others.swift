@@ -12,15 +12,39 @@ import FirebaseAuth
 import FirebaseFirestore
 
 extension Container {
+    
     var userDefaults: Factory<UserDefaults> {
         Factory(self) { UserDefaults.standard }.singleton
     }
+
+    /*
+        Repositories
+     */
     
     var authRepo: Factory<AuthRepository> {
         Factory(self) { AuthRepository() }.singleton
     }
-    
+
     var userRepo: Factory<UserRepository> {
         Factory(self) { UserRepository() }.singleton
+    }
+
+
+    /*
+        Services
+     */
+    var authService: Factory<AuthService> {
+        Factory(self) { FirestoreAuthService() }.singleton
+    }
+    
+    var userService: Factory<UserService> {
+        Factory(self) { FirestoreUserService() }.singleton
+    }
+    
+    /*
+        Firestore, Firebase
+     */
+    var auth: Factory<Auth> {
+        Factory(self) { Auth.auth() }.singleton
     }
 }

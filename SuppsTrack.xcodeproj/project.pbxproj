@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		91B56E802C79CDA200FB5D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */; };
+		91B56E822C7C926800FB5D5B /* ProfileForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B56E812C7C926800FB5D5B /* ProfileForm.swift */; };
+		91B56E8A2C7CB3B400FB5D5B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */; };
+		91B56E8C2C7CC0CB00FB5D5B /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B56E8B2C7CC0CB00FB5D5B /* Components.swift */; };
+		91B56E8E2C7CD52300FB5D5B /* ProfileFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B56E8D2C7CD52300FB5D5B /* ProfileFormViewModel.swift */; };
 		91C921E62C6F4A4C00F92FEA /* SuppsTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C921E52C6F4A4C00F92FEA /* SuppsTrackApp.swift */; };
 		91C921EA2C6F4A5000F92FEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C921E92C6F4A5000F92FEA /* Assets.xcassets */; };
 		91C921ED2C6F4A5000F92FEA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91C921EC2C6F4A5000F92FEA /* Preview Assets.xcassets */; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		91B56E812C7C926800FB5D5B /* ProfileForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileForm.swift; sourceTree = "<group>"; };
+		91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		91B56E8B2C7CC0CB00FB5D5B /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		91B56E8D2C7CD52300FB5D5B /* ProfileFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFormViewModel.swift; sourceTree = "<group>"; };
 		91C921E22C6F4A4C00F92FEA /* SuppsTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuppsTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C921E52C6F4A4C00F92FEA /* SuppsTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuppsTrackApp.swift; sourceTree = "<group>"; };
 		91C921E92C6F4A5000F92FEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91B56E852C7C972900FB5D5B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				91B56E8B2C7CC0CB00FB5D5B /* Components.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		91C921D92C6F4A4C00F92FEA = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +121,7 @@
 				91C9225A2C77E8B400F92FEA /* DI+Others.swift */,
 				91C922612C77E96200F92FEA /* Util.swift */,
 				91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */,
+				91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */,
 			);
 			path = SuppsTrack;
 			sourceTree = "<group>";
@@ -120,10 +137,13 @@
 		91C922392C77E4E000F92FEA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				91B56E852C7C972900FB5D5B /* Components */,
 				91C9223D2C77E53000F92FEA /* SettingsPage */,
 				91C9223C2C77E51600F92FEA /* MainPage */,
 				91C9223B2C77E50B00F92FEA /* StartPage */,
 				91C9223A2C77E4EB00F92FEA /* LoginPage */,
+				91B56E812C7C926800FB5D5B /* ProfileForm.swift */,
+				91B56E8D2C7CD52300FB5D5B /* ProfileFormViewModel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -229,6 +249,7 @@
 				91C921DE2C6F4A4C00F92FEA /* Sources */,
 				91C921DF2C6F4A4C00F92FEA /* Frameworks */,
 				91C921E02C6F4A4C00F92FEA /* Resources */,
+				91B56E882C7CB2DD00FB5D5B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -288,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91B56E8A2C7CB3B400FB5D5B /* .swiftlint.yml in Resources */,
 				91C921ED2C6F4A5000F92FEA /* Preview Assets.xcassets in Resources */,
 				91B56E802C79CDA200FB5D5B /* GoogleService-Info.plist in Resources */,
 				91C921EA2C6F4A5000F92FEA /* Assets.xcassets in Resources */,
@@ -295,6 +317,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91B56E882C7CB2DD00FB5D5B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91C921DE2C6F4A4C00F92FEA /* Sources */ = {
@@ -310,15 +354,18 @@
 				91C922692C77EA4B00F92FEA /* AuthService.swift in Sources */,
 				91C922592C77E84400F92FEA /* UserRepository.swift in Sources */,
 				91C9224A2C77E6C900F92FEA /* SettingsView.swift in Sources */,
+				91B56E8C2C7CC0CB00FB5D5B /* Components.swift in Sources */,
 				91C922412C77E57A00F92FEA /* LoginViewModel.swift in Sources */,
 				91C922552C77E80300F92FEA /* UserEntity.swift in Sources */,
 				91C9223F2C77E54B00F92FEA /* LoginView.swift in Sources */,
 				91C921E62C6F4A4C00F92FEA /* SuppsTrackApp.swift in Sources */,
+				91B56E822C7C926800FB5D5B /* ProfileForm.swift in Sources */,
 				91C922662C77E9B000F92FEA /* StartViewModel.swift in Sources */,
 				91C9226B2C77EA5C00F92FEA /* FirestoreAuthService.swift in Sources */,
 				91C922482C77E6B200F92FEA /* SettingsViewModel.swift in Sources */,
 				91C922532C77E7F700F92FEA /* AuthDataEntity.swift in Sources */,
 				91C9224E2C77E70D00F92FEA /* MainViewModel.swift in Sources */,
+				91B56E8E2C7CD52300FB5D5B /* ProfileFormViewModel.swift in Sources */,
 				91C9225B2C77E8B400F92FEA /* DI+Others.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +502,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SuppsTrack/Preview Content\"";
 				DEVELOPMENT_TEAM = 5M85C8QX87;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -484,6 +532,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SuppsTrack/Preview Content\"";
 				DEVELOPMENT_TEAM = 5M85C8QX87;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

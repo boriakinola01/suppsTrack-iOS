@@ -11,52 +11,48 @@ import Foundation
 import FirebaseFirestore
 
 class FirestoreUserService: UserService {
-    
+
     @Injected(\.userDefaults) internal var userDefaults
-    
+
     static let shared = FirestoreUserService()
-    
-    private init() { }
-    
+
 //    lazy var activeUserIdPublisher: AnyPublisher<String?, Never> = {
 //        userDefaults.publisher(for: \.activeUserId)
 //            .removeDuplicates()
 //            .eraseToAnyPublisher()
 //    }()
-    
+
     func getUserDocument(userId: String) -> DocumentReference {
         Firestore.firestore().collection("user").document(userId)
     }
-    
+
     func createNewUser(user: UserEntity) async throws {
         _ = try getUserDocument(userId: user.id)
             .setData(from: user, merge: false)
     }
-    
+
     func getUser(userId: String) async throws -> UserEntity {
         try await getUserDocument(userId: userId).getDocument(as: UserEntity.self)
     }
-    
+
     func addListenerForUserProfileUpdates(userId: String, completion: @escaping (_ userEntity: UserEntity) -> Void) {
         getUserDocument(userId: userId).addSnapshotListener { querySnapshot, error in
-            
+
             guard let document = querySnapshot else {
                 print("No documents")
                 return
             }
-            
-//            let userEntity: UserEntity = try! document.data(as: UserEntity.self)
-            
+
             do {
                 let userEntity: UserEntity = try document.data(as: UserEntity.self)
                 completion(userEntity)
             } catch {
                 print("Failed to decode document to UserEntity: \(error)")
             }
-            
+
         }
     }
-    
+
     func getUser(userId: String) -> AnyPublisher<UserEntity, Error> {
         return Future { [unowned self] promise in
             getUserDocument(userId: userId).getDocument { documentSnapshot, error in
@@ -78,5 +74,5 @@ class FirestoreUserService: UserService {
         }
         .eraseToAnyPublisher()
     }
-    
+
 }

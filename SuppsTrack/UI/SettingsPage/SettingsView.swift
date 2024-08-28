@@ -11,19 +11,19 @@ struct SettingsView: View {
     @StateObject private var viewModel = SettingsViewModel()
     @State private var didAppear: Bool = false
     @Binding var showSignInView: Bool
-    
+
     var body: some View {
-        
+
         List {
-            
+
             if let user = viewModel.user {
                 Text("ID: \(user.id)")
-                
+
                 Text("Name: \(user.firstName) \(user.lastName)")
                 Text("Email: \(user.email!)")
                 Text("Age: \(user.age)")
             }
-            
+
             Button("Log out") {
                 Task {
                     do {
@@ -45,22 +45,19 @@ struct SettingsView: View {
 //        .task{
 //            try? await viewModel.loadCurrentUser()
 //        }
-        .onAppear{
+        .onAppear {
             if !didAppear {
                 viewModel.addListenerForUserProfileUpdates()
                 didAppear = true
             }
         }
-        
-        
+
     }
-    
-    
+
     /*
         Profile Section
      */
-    
-    
+
     /*
         Others
      */

@@ -12,7 +12,7 @@ struct AuthDataEntity {
     var id: String
     var email: String?
     var photoUrl: String?
-    
+
     init(user: User) {
         self.id = user.uid
         self.email = user.email

@@ -8,34 +8,34 @@
 import SwiftUI
 
 struct MainView: View {
-    
+
     @StateObject private var viewModel = MainViewModel()
     @Binding var showSignInView: Bool
-    
+
     var body: some View {
-        ZStack{
-        
+        ZStack {
+
             Text("Hi there!")
-            
+
             Spacer()
 
         }
         .onAppear()
         .toolbar {
-            
+
             ToolbarItem(placement: .principal) {
                 Text("Home Page").scaledToFit()
             }
-            
+
             ToolbarItem(placement: .topBarTrailing) {
                 NavigationLink {
+                    ProfileForm()
                     SettingsView(showSignInView: $showSignInView)
                 } label: {
                     ProfilePhoto()
                 }
             }
         }
-        //.navigationHomeScreeView(title: "Welcome ", showSignInView: showSignInView)
-    };
+        // .navigationHomeScreeView(title: "Welcome ", showSignInView: showSignInView)
+    }
 }
-

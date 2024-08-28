@@ -10,13 +10,13 @@ import SwiftUI
 struct LoginView: View {
     @StateObject private var viewModel = LoginViewModel()
     @Binding var showSignInView: Bool
-    
+
     @State private var navigationLink: NavigationLinks?
 
     private enum NavigationLinks: Int {
         case homeStraight
     }
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -24,16 +24,16 @@ struct LoginView: View {
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
-                
+
                 SecureField("Password...", text: $viewModel.password)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
-                
+
                 Button {
                     viewModel.signIn()
                     showSignInView = false
-                    
+
                 } label: {
                     Text("Sign in")
                         .font(.headline)
@@ -43,7 +43,7 @@ struct LoginView: View {
                         .background(Color.blue)
                         .cornerRadius(10)
                 }
-                
+
                 Spacer()
             }
             .padding()
