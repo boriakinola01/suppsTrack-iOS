@@ -21,7 +21,7 @@ protocol AuthService {
 
     func signInUser(email: String, password: String) async throws -> AuthDataEntity
 
-    func getAuthenticatedUser() throws -> AuthDataEntity
+    func getAuthenticatedUser() throws -> User
 
     func isUserSignedIn() -> Bool
     

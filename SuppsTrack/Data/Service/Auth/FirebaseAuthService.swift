@@ -10,7 +10,7 @@ import Factory
 import Foundation
 import FirebaseAuth
 
-class FirestoreAuthService: AuthService {
+class FirebaseAuthService: AuthService {
     
     @Injected(\.auth) private var auth
     
@@ -22,13 +22,28 @@ class FirestoreAuthService: AuthService {
         auth.currentUser?.email
     }
     
-    var userId: String?
+    var userId: String? {
+        auth.currentUser?.uid
+    }
     
-    static let shared = FirestoreAuthService()
+    static let shared = FirebaseAuthService()
 
     func createUser(email: String, password: String) async throws -> AuthDataEntity {
         let authDataResult = try await auth.createUser(withEmail: email, password: password)
         return  AuthDataEntity(user: authDataResult.user)
+    }
+    
+    func signIn(email: String, password: String) -> AnyPublisher<MultiFactorResolver?, Error> {
+        return Future { [weak self] promise in
+            self?.auth.signIn(withEmail: email, password: password) { resul, error in
+                if let error {
+                    
+                } else {
+                    promise(.success(nil))
+                }
+            }
+        }
+        .eraseToAnyPublisher()
     }
 
     func signInUser(email: String, password: String) async throws -> AuthDataEntity {
@@ -36,24 +51,16 @@ class FirestoreAuthService: AuthService {
         return  AuthDataEntity(user: authDataResult.user)
     }
 
-    func getAuthenticatedUser() throws -> AuthDataEntity {
+    func getAuthenticatedUser() throws -> User {
         guard let user = auth.currentUser else {
             throw URLError(.badServerResponse)
         }
-
-        return AuthDataEntity(user: user)
+        
+        return user
     }
 
     func isUserSignedIn() -> Bool {
-        let authUser = try? FirestoreAuthService.shared.getAuthenticatedUser()
-
-        if authUser != nil {
-            print("User authenticated")
-        } else {
-            print("User not authenticated")
-        }
-
-        return authUser != nil
+        auth.currentUser != nil
     }
 
     func signOut() throws {

@@ -37,7 +37,7 @@
 		91C922642C77E99300F92FEA /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C922632C77E99300F92FEA /* StartView.swift */; };
 		91C922662C77E9B000F92FEA /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C922652C77E9B000F92FEA /* StartViewModel.swift */; };
 		91C922692C77EA4B00F92FEA /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C922682C77EA4B00F92FEA /* AuthService.swift */; };
-		91C9226B2C77EA5C00F92FEA /* FirestoreAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9226A2C77EA5C00F92FEA /* FirestoreAuthService.swift */; };
+		91C9226B2C77EA5C00F92FEA /* FirebaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C9226A2C77EA5C00F92FEA /* FirebaseAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,7 +67,7 @@
 		91C922632C77E99300F92FEA /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		91C922652C77E9B000F92FEA /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		91C922682C77EA4B00F92FEA /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		91C9226A2C77EA5C00F92FEA /* FirestoreAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreAuthService.swift; sourceTree = "<group>"; };
+		91C9226A2C77EA5C00F92FEA /* FirebaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				91C922682C77EA4B00F92FEA /* AuthService.swift */,
-				91C9226A2C77EA5C00F92FEA /* FirestoreAuthService.swift */,
+				91C9226A2C77EA5C00F92FEA /* FirebaseAuthService.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -361,7 +361,7 @@
 				91C921E62C6F4A4C00F92FEA /* SuppsTrackApp.swift in Sources */,
 				91B56E822C7C926800FB5D5B /* ProfileForm.swift in Sources */,
 				91C922662C77E9B000F92FEA /* StartViewModel.swift in Sources */,
-				91C9226B2C77EA5C00F92FEA /* FirestoreAuthService.swift in Sources */,
+				91C9226B2C77EA5C00F92FEA /* FirebaseAuthService.swift in Sources */,
 				91C922482C77E6B200F92FEA /* SettingsViewModel.swift in Sources */,
 				91C922532C77E7F700F92FEA /* AuthDataEntity.swift in Sources */,
 				91C9224E2C77E70D00F92FEA /* MainViewModel.swift in Sources */,

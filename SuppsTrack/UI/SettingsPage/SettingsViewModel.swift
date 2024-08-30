@@ -16,21 +16,21 @@ class SettingsViewModel: ObservableObject {
 
     @MainActor
     func loadCurrentUser() async throws {
-        let authUser = try FirestoreAuthService.shared.getAuthenticatedUser()
-        self.user = try await FirestoreUserService.shared.getUser(userId: authUser.id)
+        let authUser = try FirebaseAuthService.shared.getAuthenticatedUser()
+        self.user = try await FirestoreUserService.shared.getUser(userId: authUser.uid)
 
         print(user!)
     }
 
     func addListenerForUserProfileUpdates() {
-        guard let authUser = try? FirestoreAuthService.shared.getAuthenticatedUser() else { return }
+        guard let authUser = try? FirebaseAuthService.shared.getAuthenticatedUser() else { return }
 
-        FirestoreUserService.shared.addListenerForUserProfileUpdates(userId: authUser.id) { [weak self] userEntity in
+        FirestoreUserService.shared.addListenerForUserProfileUpdates(userId: authUser.uid) { [weak self] userEntity in
             self?.user = userEntity
         }
     }
 
     func logOut() throws {
-        try FirestoreAuthService.shared.signOut()
+        try FirebaseAuthService.shared.signOut()
     }
 }

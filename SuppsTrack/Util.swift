@@ -19,7 +19,7 @@ enum DatabaseError: Error {
 }
 
 enum UserDefault: String, CaseIterable {
-    case activeUserIdKey = "activeUserIdKey"
+    case activeUserIdKey
 }
 
 enum NavigationBarItem {
@@ -51,8 +51,40 @@ enum Gender: String, Codable, CaseIterable {
     case male = "Male"
     case female = "Female"
     case preferNotSay = "Prefer Not Say"
-    
 }
+
+enum Constant {
+    
+    enum Firestore {
+        
+        enum Field {
+            static let id = "id"
+            static let age = "age"
+            static let email = "email"
+            static let firstName = "firstName"
+            static let lastName = "lastName"
+            static let gender = "gender"
+            static let dateOfBirth = "dateOfBirth"
+            static let profilePhotoName = "profilePhotoName"
+            
+            static let brandiD = "brandId"
+            static let intakeDate = "intakeDate"
+            static let quantity = "quantity"
+            static let supplementId = "supplementId"
+            static let userId = "userId"
+            static let intakeForm = "intakeForm"
+        }
+        
+        enum Collection {
+            static let intake = "intake"
+            static let user = "user"
+        }
+    }
+}
+
+/*
+    Extensions
+ */
 
 extension UserDefaults {
     @objc var activeUserId: String? {
@@ -72,8 +104,6 @@ extension UserDefaults {
         }
     }
 }
-
-
 
 extension View {
 

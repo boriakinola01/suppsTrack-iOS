@@ -23,7 +23,7 @@ class FirestoreUserService: UserService {
 //    }()
 
     func getUserDocument(userId: String) -> DocumentReference {
-        Firestore.firestore().collection("user").document(userId)
+        Firestore.firestore().collection(Constant.Firestore.Collection.user).document(userId)
     }
 
     func createNewUser(user: UserEntity) async throws {

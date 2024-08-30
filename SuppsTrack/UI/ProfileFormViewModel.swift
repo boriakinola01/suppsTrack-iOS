@@ -12,6 +12,7 @@ import Foundation
 class ProfileFormViewModel: ObservableObject {
     
     @Injected(\.authRepo) private var authRepo
+    @Injected(\.userRepo) private var userRepo
     
     @Published var firstName: String = ""
     @Published var lastName: String = ""
@@ -21,9 +22,11 @@ class ProfileFormViewModel: ObservableObject {
     
     @MainActor
     func loadCurrentUser() async throws {
-        let authUserEntity = try authRepo.getAuthenticatedUser()
         
-        firstName = authUser.
+        if let userEntity = try await userRepo.getUser() {
+            firstName = userEntity.firstName
+        }
+        
     }
     
     func logOut() throws {

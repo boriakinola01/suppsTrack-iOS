@@ -27,7 +27,7 @@ final class LoginViewModel: ObservableObject {
         Task {
             do {
                 let returnedUserData =
-                    try await FirestoreAuthService.shared.signInUser(email: email, password: password)
+                    try await FirebaseAuthService.shared.signInUser(email: email, password: password)
                 print("Success")
                 print(returnedUserData)
             } catch {
@@ -50,7 +50,7 @@ final class LoginViewModel: ObservableObject {
 
         Task {
             do {
-                let returnedUserData = try await FirestoreAuthService.shared.createUser(email: email, password: password)
+                let returnedUserData = try await FirebaseAuthService.shared.createUser(email: email, password: password)
                 print("Success")
                 print(returnedUserData)
                 return true

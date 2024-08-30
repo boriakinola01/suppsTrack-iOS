@@ -23,18 +23,19 @@ struct MainView: View {
         .onAppear()
         .toolbar {
 
-            ToolbarItem(placement: .principal) {
-                Text("Home Page").scaledToFit()
-            }
+//            ToolbarItem(placement: .principal) {
+//                Text("Home Page")
+//                    .scaledToFit()
+//            }
 
-            ToolbarItem(placement: .topBarTrailing) {
-                NavigationLink {
-                    ProfileForm()
-                    SettingsView(showSignInView: $showSignInView)
-                } label: {
-                    ProfilePhoto()
-                }
-            }
+//            ToolbarItem(placement: .topBarTrailing) {
+//                NavigationLink {
+//                    ProfileForm()
+//                    SettingsView(showSignInView: $showSignInView)
+//                } label: {
+//                    ProfilePhoto()
+//                }
+//            }
         }
         // .navigationHomeScreeView(title: "Welcome ", showSignInView: showSignInView)
     }
