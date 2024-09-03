@@ -16,7 +16,6 @@ final class LoginViewModel: ObservableObject {
         Signing in a user
      */
     func signIn() {
-
 //      Include some validation for email and passwowrd authentications here
 //
         guard !email.isEmpty, !password.isEmpty else {
@@ -41,7 +40,6 @@ final class LoginViewModel: ObservableObject {
      */
 
     func signUp() async throws {
-
         guard !email.isEmpty, !password.isEmpty else {
             print("No email or passowrd found.")
             return
@@ -60,5 +58,4 @@ final class LoginViewModel: ObservableObject {
             }
         }
     }
-
 }

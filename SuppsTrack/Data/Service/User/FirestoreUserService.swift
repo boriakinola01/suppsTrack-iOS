@@ -11,7 +11,6 @@ import Foundation
 import FirebaseFirestore
 
 class FirestoreUserService: UserService {
-
     @Injected(\.userDefaults) internal var userDefaults
 
     static let shared = FirestoreUserService()
@@ -37,7 +36,6 @@ class FirestoreUserService: UserService {
 
     func addListenerForUserProfileUpdates(userId: String, completion: @escaping (_ userEntity: UserEntity) -> Void) {
         getUserDocument(userId: userId).addSnapshotListener { querySnapshot, error in
-
             guard let document = querySnapshot else {
                 print("No documents")
                 return

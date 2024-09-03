@@ -9,7 +9,6 @@ import Combine
 import Foundation
 
 class SettingsViewModel: ObservableObject {
-
     private var subscriptions = Set<AnyCancellable>()
 
     @Published private(set) var user: UserEntity?

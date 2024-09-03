@@ -14,7 +14,6 @@ import SwiftUI
  */
 
 struct TextInputField: View {
-
     @Binding var value: String
 
     var label: String
@@ -26,7 +25,6 @@ struct TextInputField: View {
     var body: some View {
         VStack {
             HStack {
-
                 Text(label)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.leading)
@@ -42,7 +40,6 @@ struct TextInputField: View {
 
             TextField(placeholderText, text: $value)
         }
-        
     }
 }
 
@@ -52,7 +49,6 @@ struct TextInputField: View {
  */
 
 struct GenderInputField: View {
-    
     @Binding var gender: Gender?
     
     var label: String
@@ -62,11 +58,9 @@ struct GenderInputField: View {
     }
     
     var body: some View {
-
         Text("Hi there")
     }
 }
-
 
 /*
     DatePicker:
@@ -79,7 +73,6 @@ struct DateInputField: View {
     var label: String
     
     var body: some View {
-        
         DatePicker(label, selection: $date)
     }
 }

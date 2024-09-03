@@ -27,23 +27,17 @@ struct UserRepository {
     }
     
     func updateUser(user: UserEntity) {
-        
     }
     
     func updatePassword(_ password: String) {
-        
     }
     
     func uploadProfilePhoto(user: UserEntity, image: UIImage) {
-        
     }
     
     func deleteProfilePhoto(user: UserEntity) {
-        
     }
     
     func getProfilePhotoUrl(for user: UserEntity) {
-        
     }
-    
 }

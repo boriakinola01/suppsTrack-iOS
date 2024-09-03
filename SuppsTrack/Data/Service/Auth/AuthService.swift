@@ -10,7 +10,6 @@ import Foundation
 import FirebaseAuth
 
 protocol AuthService {
-    
     var user: User? { get }
     
     var userEmail: String? { get }
@@ -30,5 +29,4 @@ protocol AuthService {
 //    func forgotPassword(email: String) -> AnyPublisher<Void, Error>
 
     func signOut() throws
-    
 }

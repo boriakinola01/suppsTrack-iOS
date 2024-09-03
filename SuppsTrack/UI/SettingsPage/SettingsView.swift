@@ -13,9 +13,7 @@ struct SettingsView: View {
     @Binding var showSignInView: Bool
 
     var body: some View {
-
         List {
-
             if let user = viewModel.user {
                 Text("ID: \(user.id)")
 
@@ -51,7 +49,6 @@ struct SettingsView: View {
                 didAppear = true
             }
         }
-
     }
 
     /*

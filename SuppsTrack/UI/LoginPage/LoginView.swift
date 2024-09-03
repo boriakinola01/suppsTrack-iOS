@@ -33,7 +33,6 @@ struct LoginView: View {
                 Button {
                     viewModel.signIn()
                     showSignInView = false
-
                 } label: {
                     Text("Sign in")
                         .font(.headline)

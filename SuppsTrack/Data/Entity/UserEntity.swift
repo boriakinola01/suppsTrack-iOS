@@ -8,7 +8,6 @@
 import Foundation
 
 struct UserEntity: Codable {
-
     enum Keys: String, CaseIterable {
         case id
         case firstName
@@ -44,7 +43,6 @@ struct UserEntity: Codable {
     }
 
     func toDictionary() -> [String: Any]? {
-
         guard let email else {
             return nil
         }

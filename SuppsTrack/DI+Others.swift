@@ -12,7 +12,6 @@ import FirebaseAuth
 import FirebaseFirestore
 
 extension Container {
-
     var userDefaults: Factory<UserDefaults> {
         Factory(self) { UserDefaults.standard }.singleton
     }

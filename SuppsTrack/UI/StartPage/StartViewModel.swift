@@ -8,7 +8,6 @@
 import Foundation
 
 final class StartViewModel: ObservableObject {
-
     func isSignedIn() -> Bool {
         FirebaseAuthService.shared.isUserSignedIn()
     }

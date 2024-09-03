@@ -10,7 +10,6 @@ import Foundation
 import FirebaseFirestore
 
 protocol UserService {
-
 //    var activeUserIdPublisher: AnyPublisher<String?, Never> { get set }
 
     func getUserDocument(userId: String) -> DocumentReference

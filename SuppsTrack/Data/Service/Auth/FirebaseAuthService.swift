@@ -11,7 +11,6 @@ import Foundation
 import FirebaseAuth
 
 class FirebaseAuthService: AuthService {
-    
     @Injected(\.auth) private var auth
     
     var user: User? {

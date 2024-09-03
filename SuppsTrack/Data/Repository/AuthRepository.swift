@@ -11,7 +11,6 @@ import Foundation
 import FirebaseAuth
 
 struct AuthRepository {
-
     @Injected(\.authService) private var authService
 
     var userId: String? {

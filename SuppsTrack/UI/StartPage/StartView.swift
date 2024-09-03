@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct StartView: View {
-
     @State private var showSignInView: Bool = false
     @StateObject private var viewModel = StartViewModel()
 
     var body: some View {
-
         ZStack {
             if !showSignInView {
                 NavigationStack {
@@ -29,6 +27,5 @@ struct StartView: View {
                 LoginView(showSignInView: $showSignInView)
             }
         }
-
     }
 }

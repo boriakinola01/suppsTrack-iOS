@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProfileForm: View {
-    
     @StateObject var viewModel = ProfileFormViewModel()
     @State private var didAppear: Bool = false
     @Binding var showSignInView: Bool
@@ -72,7 +71,6 @@ struct ProfileForm: View {
      */
     
     func profileValuesEdit() -> some View {
-        
         Section {
             // First name
             TextInputField(
@@ -98,7 +96,5 @@ struct ProfileForm: View {
                 didAppear = true
             }
         }
-        
     }
-
 }
