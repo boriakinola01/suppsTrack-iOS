@@ -25,10 +25,14 @@ extension Container {
         Factory(self) { AuthRepository() }.singleton
     }
 
+    
+    
     var userRepo: Factory<UserRepository> {
         Factory(self) { UserRepository() }.singleton
     }
 
+    
+    
     /*
         Services
      */
@@ -40,6 +44,8 @@ extension Container {
     var userService: Factory<UserService> {
         Factory(self) { FirestoreUserService() }.singleton
     }
+    
+    
     
     /*
         Firestore, Firebase
