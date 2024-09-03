@@ -97,6 +97,7 @@
 		91C921D92C6F4A4C00F92FEA = {
 			isa = PBXGroup;
 			children = (
+				91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */,
 				91C921E42C6F4A4C00F92FEA /* SuppsTrack */,
 				91C921E32C6F4A4C00F92FEA /* Products */,
 			);
@@ -121,7 +122,6 @@
 				91C921E92C6F4A5000F92FEA /* Assets.xcassets */,
 				91C921EB2C6F4A5000F92FEA /* Preview Content */,
 				91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */,
-				91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */,
 			);
 			path = SuppsTrack;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed\"\nfi\n";
+			shellScript = "\nif [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: command not found\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
