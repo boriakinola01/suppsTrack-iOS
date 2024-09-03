@@ -116,10 +116,10 @@
 				91C922422C77E61C00F92FEA /* Data */,
 				91C922392C77E4E000F92FEA /* UI */,
 				91C921E52C6F4A4C00F92FEA /* SuppsTrackApp.swift */,
-				91C921E92C6F4A5000F92FEA /* Assets.xcassets */,
-				91C921EB2C6F4A5000F92FEA /* Preview Content */,
 				91C9225A2C77E8B400F92FEA /* DI+Others.swift */,
 				91C922612C77E96200F92FEA /* Util.swift */,
+				91C921E92C6F4A5000F92FEA /* Assets.xcassets */,
+				91C921EB2C6F4A5000F92FEA /* Preview Content */,
 				91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */,
 				91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */,
 			);

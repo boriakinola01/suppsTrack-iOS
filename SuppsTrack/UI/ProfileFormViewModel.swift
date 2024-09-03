@@ -19,7 +19,6 @@ class ProfileFormViewModel: ObservableObject {
     @Published var gender: Gender?
     @Published var dateOfBirth: Date?
     
-    
     @MainActor
     func loadCurrentUser() async throws {
         

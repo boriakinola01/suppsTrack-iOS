@@ -8,31 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-/*
-    Form Label: Label for each field in the form.
-    Also indicates if the field is optional or not
- */
-struct FormLabel: View {
-
-    var label: String
-
-    var isOptional: Bool?
-
-    var body: some View {
-        HStack {
-
-            Text(label)
-                .foregroundColor(.gray)
-
-            if let isOptional = isOptional, isOptional {
-                Text("Optional")
-                    .foregroundColor(.gray)
-            }
-        }
-    }
-}
-
 /*
     TextFieldInput:
         Basically a textfield that handles user input. Multiple of these would be used inside a form for example.
@@ -48,12 +23,26 @@ struct TextInputField: View {
 
     var isOptional: Bool = false
     
-
     var body: some View {
-        
-        FormLabel(label: label, isOptional: isOptional)
+        VStack {
+            HStack {
 
-        TextField(placeholderText, text: $value)
+                Text(label)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.leading)
+
+                if isOptional {
+                    Text("(Optional)")
+                        .foregroundColor(.gray)
+                        .opacity(0.6)
+                }
+                
+                Spacer()
+            }
+
+            TextField(placeholderText, text: $value)
+        }
+        
     }
 }
 
@@ -75,5 +64,22 @@ struct GenderInputField: View {
     var body: some View {
 
         Text("Hi there")
+    }
+}
+
+
+/*
+    DatePicker:
+        An input for editing the date values
+ */
+
+struct DateInputField: View {
+    @State var date = Date()
+    
+    var label: String
+    
+    var body: some View {
+        
+        DatePicker(label, selection: $date)
     }
 }

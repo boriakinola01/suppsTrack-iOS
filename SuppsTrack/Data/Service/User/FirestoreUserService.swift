@@ -49,7 +49,6 @@ class FirestoreUserService: UserService {
             } catch {
                 print("Failed to decode document to UserEntity: \(error)")
             }
-
         }
     }
 
@@ -58,6 +57,7 @@ class FirestoreUserService: UserService {
             getUserDocument(userId: userId).getDocument { documentSnapshot, error in
                 if let error {
                     print("Document was not fetched from database")
+                    print(error)
                     promise(.failure(DatabaseError.databaseNotReacheable))
                 } else if let document = documentSnapshot, document.exists {
                     do {
@@ -74,5 +74,4 @@ class FirestoreUserService: UserService {
         }
         .eraseToAnyPublisher()
     }
-
 }

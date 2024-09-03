@@ -38,6 +38,4 @@ struct AuthRepository {
         let authUser = try authService.getAuthenticatedUser()
         return authUser
     }
-    
-
 }

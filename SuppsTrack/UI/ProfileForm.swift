@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ProfileForm: View {
     
-    @StateObject var viewModel: ProfileFormViewModel
+    @StateObject var viewModel = ProfileFormViewModel()
     @State private var didAppear: Bool = false
     @Binding var showSignInView: Bool
     
     var body: some View {
         ZStack {
-
-            ScrollView(showsIndicators: false) {
+            VStack {
                 profileHeader()
                 
                 profileValuesEdit()
@@ -39,6 +38,7 @@ struct ProfileForm: View {
                 .background(Color.blue)
                 .cornerRadius(10)
             }
+            .padding()
         }
     }
 
@@ -52,7 +52,8 @@ struct ProfileForm: View {
                 alignment: .bottomTrailing
             ) {
                 Group {
-                        Image("EmptyProfile").resizable().aspectRatio(contentMode: .fill)
+                    Image("EmptyProfile")
+                        .resizable().aspectRatio(contentMode: .fill)
                 }
                 .clipShape(Circle())
                 .frame(width: 80, height: 80)
@@ -66,7 +67,6 @@ struct ProfileForm: View {
         }
     }
     
-    
     /*
         Profile Values Edit
      */
@@ -79,7 +79,7 @@ struct ProfileForm: View {
                 value: $viewModel.firstName,
                 label: "First Name",
                 placeholderText: "Your first name",
-                isOptional: false)
+                isOptional: true)
             
             // Last name
             TextInputField(
@@ -90,15 +90,14 @@ struct ProfileForm: View {
             
             // Gender
             
-            
             // Date of Birth
+            
         }
         .onAppear {
             if !didAppear {
                 didAppear = true
             }
         }
-        
         
     }
 

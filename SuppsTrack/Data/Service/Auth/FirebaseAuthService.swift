@@ -35,9 +35,9 @@ class FirebaseAuthService: AuthService {
     
     func signIn(email: String, password: String) -> AnyPublisher<MultiFactorResolver?, Error> {
         return Future { [weak self] promise in
-            self?.auth.signIn(withEmail: email, password: password) { resul, error in
+            self?.auth.signIn(withEmail: email, password: password) { _, error in
                 if let error {
-                    
+                    print(error)
                 } else {
                     promise(.success(nil))
                 }
