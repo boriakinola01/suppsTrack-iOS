@@ -249,7 +249,7 @@
 				91C921DE2C6F4A4C00F92FEA /* Sources */,
 				91C921DF2C6F4A4C00F92FEA /* Frameworks */,
 				91C921E02C6F4A4C00F92FEA /* Resources */,
-				91B56E882C7CB2DD00FB5D5B /* ShellScript */,
+				91B56E882C7CB2DD00FB5D5B /* Linter */,
 			);
 			buildRules = (
 			);
@@ -319,7 +319,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		91B56E882C7CB2DD00FB5D5B /* ShellScript */ = {
+		91B56E882C7CB2DD00FB5D5B /* Linter */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -329,13 +329,14 @@
 			);
 			inputPaths = (
 			);
+			name = Linter;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\nif [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: command not found\"\nfi\n";
+			shellScript = "\nif [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint --fix && swiftlint\nelse\n    echo \"warning: command not found\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
