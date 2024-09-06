@@ -38,13 +38,12 @@ enum NavigationBarItem {
 
     static func close() -> some View {
         Button(
-            action: {print("Button pressed!!!")},
+            action: { print("Button pressed!!!") },
             label: {
                 Image("back")
             }
         )
     }
-
 }
 
 enum Gender: String, Codable, CaseIterable {
@@ -54,9 +53,7 @@ enum Gender: String, Codable, CaseIterable {
 }
 
 enum Constant {
-    
     enum Firestore {
-        
         enum Field {
             static let id = "id"
             static let age = "age"
@@ -106,7 +103,6 @@ extension UserDefaults {
 }
 
 extension View {
-
     @ViewBuilder
     func navigationHomeScreeView(title: String? = nil, showSignInView: Bool) -> some View {
         self.modifier(NavigationHomeScreenViewModifier(title: title))
@@ -114,7 +110,6 @@ extension View {
 }
 
 struct NavigationHomeScreenViewModifier: ViewModifier {
-
     var title: String?
 
     func body(content: Content) -> some View {
@@ -129,12 +124,10 @@ struct NavigationHomeScreenViewModifier: ViewModifier {
                 }
         }
     }
-
 }
 
 @ToolbarContentBuilder
 func toolbarItems<L: View, C: View, T: View>(leadingItem: L, centerItem: C, trailingItem: T) -> some ToolbarContent {
-
     ToolbarItem(placement: .navigationBarLeading) {
         leadingItem
     }
@@ -149,11 +142,9 @@ func toolbarItems<L: View, C: View, T: View>(leadingItem: L, centerItem: C, trai
 }
 
 struct ProfilePhoto: View {
-
     @EnvironmentObject var startViewModel: StartViewModel
 
     var body: some View {
-
         ZStack {
                 Image(systemName: "person.circle")
                 .resizable()
@@ -161,6 +152,5 @@ struct ProfilePhoto: View {
                 .accentColor(.blue)
                 .opacity(1)
             }
-
     }
 }

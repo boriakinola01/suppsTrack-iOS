@@ -15,8 +15,6 @@ struct UserEntity: Codable {
         case age
         case email
     }
-    
-    
 
     var id: String
 

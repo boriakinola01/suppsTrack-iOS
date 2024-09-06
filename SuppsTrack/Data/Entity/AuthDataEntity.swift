@@ -9,8 +9,6 @@ import Foundation
 import FirebaseAuth
 
 struct AuthDataEntity {
-    
-    
     var id: String
     
     var email: String?
