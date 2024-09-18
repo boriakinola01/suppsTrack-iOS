@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileCard: View {
     var user: UserEntity
+    @Binding var showEditUserInfo: Bool
     
     var body: some View {
         ZStack {
@@ -46,13 +47,20 @@ struct ProfileCard: View {
                 
                     // Edit info label
                     Text("Edit Info")
-                        .font(.subheadline)
+                        .font(.title3)
                         .foregroundColor(.gray)
+                        .onTapGesture {
+                            showEditUserInfo = true
+                        }
                 }
                 Spacer()
             }
+
             .padding()
             .frame(width: 370, height: 130)
+            .sheet(isPresented: $showEditUserInfo, content: {
+                ProfileForm()
+            })
         }
     }
 }

@@ -7,25 +7,15 @@
 
 import Combine
 import Factory
+import SwiftUI
 import Foundation
 
 class ProfileFormViewModel: ObservableObject {
-    @Injected(\.authRepo) private var authRepo
-    @Injected(\.userRepo) private var userRepo
-    
+    @Published var newProfilePhoto: UIImage?
+    @Published var profilePhotoRemoved: Bool = false
     @Published var firstName: String = ""
     @Published var lastName: String = ""
-    @Published var gender: Gender?
     @Published var dateOfBirth: Date?
-    
-    @MainActor
-    func loadCurrentUser() async throws {
-        if let userEntity = try await userRepo.getUser() {
-            firstName = userEntity.firstName
-        }
-    }
-    
-    func logOut() throws {
-        try authRepo.logOut()
-    }
+    @Published var heightMetres: Double = 0.0
+    @Published var weightKg: Double = 0.0
 }

@@ -50,25 +50,6 @@ struct TextInputField: View {
 }
 
 /*
-    GenderInputField:
-        An iput field for users to update their gender you see
- */
-
-struct GenderInputField: View {
-    @Binding var gender: Gender?
-    
-    var label: String
-    
-    private var showPlaceholder: Bool {
-        gender == nil
-    }
-    
-    var body: some View {
-        Text("Hi there")
-    }
-}
-
-/*
     DatePicker:
         An input for editing the date values
  */

@@ -9,13 +9,14 @@ import SwiftUI
 
 struct SettingsView: View {
     @StateObject private var viewModel = SettingsViewModel()
+    @State private var showEditUserInfo = false
     @State private var didAppear: Bool = false
     @Binding var showSignInView: Bool
-
+    
     var body: some View {
         ScrollView {
             if let user = viewModel.user {
-                ProfileCard(user: user)
+                ProfileCard(user: user, showEditUserInfo: $showEditUserInfo)
             }
             
             Spacer()
@@ -57,12 +58,4 @@ struct SettingsView: View {
             }
         }
     }
-
-    /*
-        Profile Section
-     */
-
-    /*
-        Others
-     */
 }
