@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		91ACC8AC2C99043700D4AC33 /* SettingsProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ACC8AB2C99043700D4AC33 /* SettingsProfileCard.swift */; };
+		91ACC8AE2C9A8E4200D4AC33 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91ACC8AD2C9A8E4200D4AC33 /* Colors.xcassets */; };
 		91B56E802C79CDA200FB5D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */; };
 		91B56E822C7C926800FB5D5B /* ProfileForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B56E812C7C926800FB5D5B /* ProfileForm.swift */; };
 		91B56E8A2C7CB3B400FB5D5B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		91ACC8AB2C99043700D4AC33 /* SettingsProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileCard.swift; sourceTree = "<group>"; };
+		91ACC8AD2C9A8E4200D4AC33 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91B56E812C7C926800FB5D5B /* ProfileForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileForm.swift; sourceTree = "<group>"; };
 		91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				91C9225A2C77E8B400F92FEA /* DI+Others.swift */,
 				91C922612C77E96200F92FEA /* Util.swift */,
 				91C921E92C6F4A5000F92FEA /* Assets.xcassets */,
+				91ACC8AD2C9A8E4200D4AC33 /* Colors.xcassets */,
 				91C921EB2C6F4A5000F92FEA /* Preview Content */,
 				91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */,
 				91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */,
@@ -312,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91ACC8AE2C9A8E4200D4AC33 /* Colors.xcassets in Resources */,
 				91B56E8A2C7CB3B400FB5D5B /* .swiftlint.yml in Resources */,
 				91C921ED2C6F4A5000F92FEA /* Preview Assets.xcassets in Resources */,
 				91B56E802C79CDA200FB5D5B /* GoogleService-Info.plist in Resources */,
