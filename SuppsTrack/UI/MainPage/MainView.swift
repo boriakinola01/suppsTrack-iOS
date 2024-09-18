@@ -26,8 +26,8 @@ struct MainView: View {
 
             ToolbarItem(placement: .topBarTrailing) {
                 NavigationLink {
-                    ProfileForm(showSignInView: $showSignInView)
-//                    SettingsView(showSignInView: $showSignInView)
+//                    ProfileForm(showSignInView: $showSignInView)
+                    SettingsView(showSignInView: $showSignInView)
                 } label: {
                     ProfilePhoto()
                 }

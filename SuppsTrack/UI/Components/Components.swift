@@ -37,9 +37,15 @@ struct TextInputField: View {
                 
                 Spacer()
             }
+            
 
             TextField(placeholderText, text: $value)
+                .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(.black, lineWidth: 2)
+                )
         }
+        .padding()
     }
 }
 

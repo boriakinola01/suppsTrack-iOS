@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91ACC8AC2C99043700D4AC33 /* SettingsProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ACC8AB2C99043700D4AC33 /* SettingsProfileCard.swift */; };
 		91B56E802C79CDA200FB5D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */; };
 		91B56E822C7C926800FB5D5B /* ProfileForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B56E812C7C926800FB5D5B /* ProfileForm.swift */; };
 		91B56E8A2C7CB3B400FB5D5B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91ACC8AB2C99043700D4AC33 /* SettingsProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileCard.swift; sourceTree = "<group>"; };
 		91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91B56E812C7C926800FB5D5B /* ProfileForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileForm.swift; sourceTree = "<group>"; };
 		91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				91B56E8B2C7CC0CB00FB5D5B /* Components.swift */,
+				91ACC8AB2C99043700D4AC33 /* SettingsProfileCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C922642C77E99300F92FEA /* StartView.swift in Sources */,
+				91ACC8AC2C99043700D4AC33 /* SettingsProfileCard.swift in Sources */,
 				91C9225E2C77E91900F92FEA /* UserService.swift in Sources */,
 				91C9224C2C77E6F300F92FEA /* MainView.swift in Sources */,
 				91C922572C77E83300F92FEA /* AuthRepository.swift in Sources */,

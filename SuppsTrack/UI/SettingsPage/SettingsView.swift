@@ -13,14 +13,21 @@ struct SettingsView: View {
     @Binding var showSignInView: Bool
 
     var body: some View {
-        List {
+        ScrollView {
             if let user = viewModel.user {
-                Text("ID: \(user.id)")
-
-                Text("Name: \(user.firstName) \(user.lastName)")
-                Text("Email: \(user.email!)")
-                Text("Age: \(user.age)")
+                ProfileCard(user: user)
             }
+            
+            Spacer()
+            
+//            if let user = viewModel.user {
+//                Text("ID: \(user.id)")
+//
+//                Text("Name: \(user.firstName) \(user.lastName)")
+//                Text("Email: \(user.email!)")
+//                Text("Age: \(user.age)")
+//            }
+            
 
             Button("Log out") {
                 Task {

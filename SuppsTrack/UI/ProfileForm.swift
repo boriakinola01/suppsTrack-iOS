@@ -14,7 +14,7 @@ struct ProfileForm: View {
     
     var body: some View {
         ZStack {
-            VStack {
+            ScrollView {
                 profileHeader()
                 
                 profileValuesEdit()
@@ -71,7 +71,7 @@ struct ProfileForm: View {
      */
     
     func profileValuesEdit() -> some View {
-        Section {
+        Section() {
             // First name
             TextInputField(
                 value: $viewModel.firstName,

@@ -14,6 +14,7 @@ struct UserEntity: Codable {
         case lastName
         case age
         case email
+        case dateOfBirth
     }
 
     var id: String
@@ -25,6 +26,8 @@ struct UserEntity: Codable {
     var age: Int
 
     var email: String?
+    
+    var dateOfBirth: Date?
 
     init() {
         self.id = ""
@@ -32,14 +35,16 @@ struct UserEntity: Codable {
         self.firstName = ""
         self.lastName = ""
         self.email = ""
+        self.dateOfBirth = Date()
     }
 
-    init(id: String, firstName: String, lastName: String, age: Int, email: String? = nil) {
+    init(id: String, firstName: String, lastName: String, age: Int, email: String? = nil, date: Date? = Date()) {
         self.id = id
         self.firstName = firstName
         self.lastName = lastName
         self.age = age
         self.email = email
+        self.dateOfBirth = date
     }
 
     func toDictionary() -> [String: Any]? {
@@ -54,6 +59,7 @@ struct UserEntity: Codable {
         dict[Keys.lastName.rawValue] = lastName
         dict[Keys.age.rawValue] = age
         dict[Keys.email.rawValue] = email
+        dict[Keys.dateOfBirth.rawValue] = dateOfBirth
 
         return dict
     }
