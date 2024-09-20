@@ -31,7 +31,7 @@ struct ProfileCard: View {
                     .padding(1)
                     .clipped()
                     
-                    ZStack{
+                    ZStack {
                         Circle()
                             .fill(Color.red_00)
                             .frame(width: 10, height: 10)

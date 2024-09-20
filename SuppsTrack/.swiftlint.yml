@@ -2,11 +2,13 @@ only_rules: # some rules are only opt-in
   - vertical_whitespace_closing_braces
   - vertical_whitespace_opening_braces
   - vertical_whitespace_between_cases
+  - literal_expression_end_indentation
   - closure_spacing
   - control_statement
   - empty_count
   - trailing_newline
   - force_unwrapping
+  - opening_brace
   - colon
   - comma
 included: # paths to include during linting. `--path` is ignored if present.
