@@ -15,27 +15,32 @@ struct ProfileCard: View {
         ZStack {
             // Background rounded rectangle
             RoundedRectangle(cornerRadius: 20)
-                .fill(Color.blue.opacity(0.1))
-                .frame(width: 370, height: 130)
+                .fill(Color.red_00)
+                .frame(width: 370, height: 110)
             
             HStack(spacing: 20) {
-                ZStack {
-                    // Placeholder profile icon
-                    Image(systemName: "person.circle")
-                        .resizable()
-                        .font(Font.title.weight(.ultraLight))
-                        .scaledToFit()
-                        .frame(width: 95, height: 95)
-                        .clipShape(Circle())
+                ZStack(alignment: .bottomTrailing) {
+                    Group {
+                        Image(systemName: "person.circle")
+                            .resizable()
+                    }
+                    .font(Font.title.weight(.ultraLight))
+                    .foregroundColor(.blue_10)
+                    .clipShape(Circle())
+                    .frame(width: 80, height: 75)
+                    .padding(1)
+                    .clipped()
                     
-                    // Edit icon on top of profile icon
-                    Image(systemName: "camera.circle.fill")
-                        .resizable()
-                        .font(Font.title.weight(.ultraLight))
-                        .scaledToFit()
-                        .frame(width: 20, height: 20)
-                        .background()
-                        .offset(x: 35, y: 20)
+                    ZStack{
+                        Circle()
+                            .fill(Color.red_00)
+                            .frame(width: 10, height: 10)
+                        
+                        Image(systemName: "camera.circle.fill")
+                            .frame(width: 25, height: 25)
+                            .foregroundColor(.B_08)
+                            .shadow(color: .red_08, radius: 5)
+                    }
                 }
                 
                 VStack(alignment: .leading) {
@@ -44,11 +49,12 @@ struct ProfileCard: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.bottom)
+                        .foregroundColor(.blue_10)
                 
                     // Edit info label
                     Text("Edit Info")
                         .font(.title3)
-                        .foregroundColor(.gray)
+                        .foregroundColor(.blue_04)
                         .onTapGesture {
                             showEditUserInfo = true
                         }
@@ -57,7 +63,7 @@ struct ProfileCard: View {
             }
 
             .padding()
-            .frame(width: 370, height: 130)
+            .frame(width: 370, height: 110)
             .sheet(isPresented: $showEditUserInfo, content: {
                 ProfileForm()
             })

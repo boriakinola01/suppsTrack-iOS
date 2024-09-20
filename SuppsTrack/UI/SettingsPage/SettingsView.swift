@@ -20,17 +20,20 @@ struct SettingsView: View {
             }
             
             Spacer()
+                .frame(height: 45)
             
-//            if let user = viewModel.user {
-//                Text("ID: \(user.id)")
-//
-//                Text("Name: \(user.firstName) \(user.lastName)")
-//                Text("Email: \(user.email!)")
-//                Text("Age: \(user.age)")
-//            }
+            SettingsAppSection()
             
-
-            Button("Log out") {
+            Spacer()
+                .frame(height: 45)
+            
+            SettingsExtrasSection()
+            
+            Spacer()
+                .frame(height: 45)
+            
+            
+            Button(action: {
                 Task {
                     do {
                         try viewModel.logOut()
@@ -40,17 +43,25 @@ struct SettingsView: View {
                     }
                 }
                 print("Logged out.......")
+            }) {
+                Text("Log out")
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.blue_08)
+                    .foregroundColor(Color.primary_w)
+                    .cornerRadius(20)
+                    .padding(.horizontal, 100)
             }
-            .font(.headline)
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity)
-            .frame(height: 60)
-            .background(Color.blue)
-            .cornerRadius(10)
+            .shadow(radius: 5)
         }
-//        .task{
-//            try? await viewModel.loadCurrentUser()
-//        }
+        .toolbar {
+            toolbarItems(
+                leadingItem: EmptyView(),
+                centerItem: Text("Settings"),
+                trailingItem: EmptyView()
+            )
+        }
         .onAppear {
             if !didAppear {
                 viewModel.addListenerForUserProfileUpdates()

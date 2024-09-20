@@ -63,3 +63,35 @@ struct DateInputField: View {
         DatePicker(label, selection: $date)
     }
 }
+
+
+struct ListItem: View {
+    var iconName: String? = nil
+    var label: String
+    var clickable: Bool
+    
+    var body: some View {
+        HStack {
+            if let iconName = iconName {
+                Image(systemName: iconName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.red_10)
+                    .padding(.trailing, 5)
+            }
+           
+            Text(label)
+                .font(.headline)
+                .foregroundColor(Color.primary_b)
+            
+            Spacer()
+            
+            if clickable {
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.red_04)
+            }
+        }
+        .padding()
+    }
+}

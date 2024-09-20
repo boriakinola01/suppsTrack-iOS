@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		91ACC8AC2C99043700D4AC33 /* SettingsProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ACC8AB2C99043700D4AC33 /* SettingsProfileCard.swift */; };
 		91ACC8AE2C9A8E4200D4AC33 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91ACC8AD2C9A8E4200D4AC33 /* Colors.xcassets */; };
+		91ACC8B42C9B7EAD00D4AC33 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ACC8B32C9B7EAD00D4AC33 /* ColorPalette.swift */; };
+		91ACC8B62C9BBF1900D4AC33 /* SettingsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ACC8B52C9BBF1900D4AC33 /* SettingsApp.swift */; };
+		91ACC8B82C9BCA4300D4AC33 /* SettingsExtras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91ACC8B72C9BCA4300D4AC33 /* SettingsExtras.swift */; };
 		91B56E802C79CDA200FB5D5B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */; };
 		91B56E822C7C926800FB5D5B /* ProfileForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B56E812C7C926800FB5D5B /* ProfileForm.swift */; };
 		91B56E8A2C7CB3B400FB5D5B /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */; };
@@ -45,6 +48,9 @@
 /* Begin PBXFileReference section */
 		91ACC8AB2C99043700D4AC33 /* SettingsProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileCard.swift; sourceTree = "<group>"; };
 		91ACC8AD2C9A8E4200D4AC33 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		91ACC8B32C9B7EAD00D4AC33 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		91ACC8B52C9BBF1900D4AC33 /* SettingsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsApp.swift; sourceTree = "<group>"; };
+		91ACC8B72C9BCA4300D4AC33 /* SettingsExtras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsExtras.swift; sourceTree = "<group>"; };
 		91B56E7F2C79CDA200FB5D5B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91B56E812C7C926800FB5D5B /* ProfileForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileForm.swift; sourceTree = "<group>"; };
 		91B56E892C7CB3B400FB5D5B /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 			children = (
 				91B56E8B2C7CC0CB00FB5D5B /* Components.swift */,
 				91ACC8AB2C99043700D4AC33 /* SettingsProfileCard.swift */,
+				91ACC8B52C9BBF1900D4AC33 /* SettingsApp.swift */,
+				91ACC8B72C9BCA4300D4AC33 /* SettingsExtras.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 		91C922392C77E4E000F92FEA /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				91ACC8B32C9B7EAD00D4AC33 /* ColorPalette.swift */,
 				91B56E852C7C972900FB5D5B /* Components */,
 				91C9223D2C77E53000F92FEA /* SettingsPage */,
 				91C9223C2C77E51600F92FEA /* MainPage */,
@@ -355,6 +364,8 @@
 			files = (
 				91C922642C77E99300F92FEA /* StartView.swift in Sources */,
 				91ACC8AC2C99043700D4AC33 /* SettingsProfileCard.swift in Sources */,
+				91ACC8B62C9BBF1900D4AC33 /* SettingsApp.swift in Sources */,
+				91ACC8B82C9BCA4300D4AC33 /* SettingsExtras.swift in Sources */,
 				91C9225E2C77E91900F92FEA /* UserService.swift in Sources */,
 				91C9224C2C77E6F300F92FEA /* MainView.swift in Sources */,
 				91C922572C77E83300F92FEA /* AuthRepository.swift in Sources */,
@@ -364,6 +375,7 @@
 				91C922592C77E84400F92FEA /* UserRepository.swift in Sources */,
 				91C9224A2C77E6C900F92FEA /* SettingsView.swift in Sources */,
 				91B56E8C2C7CC0CB00FB5D5B /* Components.swift in Sources */,
+				91ACC8B42C9B7EAD00D4AC33 /* ColorPalette.swift in Sources */,
 				91C922412C77E57A00F92FEA /* LoginViewModel.swift in Sources */,
 				91C922552C77E80300F92FEA /* UserEntity.swift in Sources */,
 				91C9223F2C77E54B00F92FEA /* LoginView.swift in Sources */,
@@ -518,6 +530,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -548,6 +561,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
